@@ -41,7 +41,22 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Commands\Bace\FileManagerCommand.cs" />
+    <Compile Include="Commands\Bace\ListCommands.cs" />
+    <Compile Include="Commands\ChangeDir.cs" />
+    <Compile Include="Commands\Copy.cs" />
+    <Compile Include="Commands\Get_Drive.cs" />
+    <Compile Include="Commands\Get_Infi_Dir_File.cs" />
+    <Compile Include="Commands\Make_Directory.cs" />
+    <Compile Include="Commands\Make_File.cs" />
+    <Compile Include="Commands\Remove.cs" />
+    <Compile Include="DataDirectores.cs" />
+    <Compile Include="FileManagerLogic.cs" />
+    <Compile Include="IUserInterface.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UserMenegement.cs" />
+    <Compile Include="User_Command\Command_List.cs" />
+    <Compile Include="User_Command\UserCommandInfo.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
