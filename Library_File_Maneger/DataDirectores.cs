@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Library_File_Maneger
 {
-    internal sealed class DataDirectores
+    public sealed class DataDirectores
     {
         //================= static ===============================
         /// <summary>

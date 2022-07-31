@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Library_File_Maneger.Commands.Bace
 {
-    internal abstract class FileManagerCommand
+    public abstract class FileManagerCommand
     {
         public abstract DataDirectores[] DataDirs { get; set; }
 
