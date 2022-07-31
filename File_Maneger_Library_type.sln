@@ -3,7 +3,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.2.32616.157
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "File_Maneger_Library_type", "File_Maneger_Library_type\File_Maneger_Library_type.csproj", "{84AE1296-091A-4C97-A29F-171AE03234EA}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "File_Maneger_Library_type", "File_Maneger_Library_type\File_Maneger_Library_type.csproj", "{84AE1296-091A-4C97-A29F-171AE03234EA}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library_File_maneger_NetFramework", "Library_File_maneger_NetFramework\Library_File_maneger_NetFramework.csproj", "{23CA9CEF-EA62-405A-9194-AE595346EB20}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -15,6 +17,10 @@ Global
 		{84AE1296-091A-4C97-A29F-171AE03234EA}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{84AE1296-091A-4C97-A29F-171AE03234EA}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{84AE1296-091A-4C97-A29F-171AE03234EA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23CA9CEF-EA62-405A-9194-AE595346EB20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23CA9CEF-EA62-405A-9194-AE595346EB20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23CA9CEF-EA62-405A-9194-AE595346EB20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23CA9CEF-EA62-405A-9194-AE595346EB20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
