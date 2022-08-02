@@ -24,6 +24,8 @@ namespace Win_Forms_Maneger
         //=======================================================================
         public Form1(DataDirectores[] data_dirs)
         {
+            this.data_dirs = data_dirs;
+            WF_Interface = new UserInterfaceFW(this);
             InitializeComponent();
         }
         //=======================================================================
@@ -34,7 +36,7 @@ namespace Win_Forms_Maneger
             IdLeft = 0;
             IdRight = 0;
 
-            Command = new UserCommandInfo(DisplayKey.LineCommand, "getdrives");
+            Command = new UserCommandInfo(Command_List.LineCommand, "getdrives");
             FileManagerLogic.Stop();
             file_maneger.Start();
         }
@@ -112,6 +114,132 @@ namespace Win_Forms_Maneger
             comboBoxRight.Items.AddRange(str);
             comboBoxRight.Text = "Select drive";
         }
-        //=======================================================================
+
+        //========================== Left ======================================
+        private void LeftListBox_MouseDown(object sender, MouseEventArgs e)
+        {
+            ChangeWind(0);
+            if (LeftListBox.SelectedIndex == 0)
+            {
+                Command = new UserCommandInfo(Command_List.ChangeDirUpp);
+            }
+            else
+            {
+                IdLeft = LeftListBox.SelectedIndex;
+                Command = new UserCommandInfo(Command_List.GetLength, ControlCom.GetStringForInfo(IdLeft));
+            }
+            IdLeft = LeftListBox.SelectedIndex;
+            file_maneger.Start();
+        }
+        private void LeftListBox_DoubleClick(object sender, EventArgs e)
+        {
+            Command = new UserCommandInfo(Command_List.ChangeDir, ControlCom.GetStringDir(IdLeft));
+            file_maneger.Start();
+        }
+
+        private void LeftListBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ChangeWind(0);
+            Command = new UserCommandInfo(Command_List.ChangeDir, Drive[comboBoxLeft.SelectedIndex]);
+            file_maneger.Start();
+        }
+
+        //============================ Right ====================================
+        private void RightlistBox_MouseDown(object sender, MouseEventArgs e)
+        {
+            ChangeWind(1);
+            if (RightlistBox.SelectedIndex == 0)
+            {
+                Command = new UserCommandInfo(Command_List.ChangeDirUpp);
+            }
+            else
+            {
+                Command = new UserCommandInfo(Command_List.GetLength, ControlCom.GetStringDir(IdRight));
+            }
+            IdRight = RightlistBox.SelectedIndex;
+            file_maneger.Start();
+        }
+
+        private void RightlistBox_DoubleClick(object sender, EventArgs e)
+        {
+            Command = new UserCommandInfo(Command_List.ChangeDir, ControlCom.GetStringDir(IdRight));
+            file_maneger.Start();
+        }
+
+        private void RightlistBox_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            ChangeWind(1);
+            Command = new UserCommandInfo(Command_List.ChangeDir, Drive[comboBoxRight.SelectedIndex]);
+            file_maneger.Start();
+        }
+
+        //============================ Buttons ====================================
+
+        private void buttonCopy_Click(object sender, EventArgs e)
+        {
+            int otherWind = DataDirectores.Select_Window == 0 ? 1 : 0;
+            int idFile;
+
+            if (DataDirectores.Select_Window == 0)
+            {
+                idFile = LeftListBox.SelectedIndex;
+            }
+            else
+            {
+                idFile = RightlistBox.SelectedIndex;
+            }
+
+            string mess1 = data_dirs[DataDirectores.Select_Window].AllDirectoris[idFile];
+            string mess2 = data_dirs[otherWind].DirHome;
+
+            var result = MessageBox.Show("Копироавть: " + mess1 + " в " + mess2 + "?",
+                                            "Копироавть?", MessageBoxButtons.YesNo);
+
+            if (result == System.Windows.Forms.DialogResult.Yes)
+            {
+                Command = new UserCommandInfo
+                    (
+                        Command_List.Copy,
+                        ControlCom.GetNameForCopy(idFile, otherWind)
+                    );
+            }
+            file_maneger.Start();
+        }
+
+        private void buttonDelit_Click(object sender, EventArgs e)
+        {
+            int otherWind = DataDirectores.Select_Window == 0 ? 1 : 0;
+            int idFile;
+
+            if (DataDirectores.Select_Window == 0)
+            {
+                idFile = LeftListBox.SelectedIndex;
+            }
+            else
+            {
+                idFile = RightlistBox.SelectedIndex;
+            }
+
+            string mess = data_dirs[DataDirectores.Select_Window].AllDirectoris[idFile];
+            var result = MessageBox.Show("Удалить: " + mess + "?",
+                                            "Удалить?", MessageBoxButtons.YesNo);
+            if (result == System.Windows.Forms.DialogResult.Yes)
+            {
+                Command = new UserCommandInfo(Command_List.LineCommand, "rm -d " + ControlCom.GetNameForDelit(idFile));
+            }
+            file_maneger.Start();
+        }
+
+        private void buttonTouchFile_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2(ControlCom, "Создание папки", "Имя папки:", 0);
+            form2.Show();
+        }
+
+        private void buttonMkDir_Click(object sender, EventArgs e)
+        {
+            Form2 form2 = new Form2(ControlCom, "Создание файла", "Имя файла:", 0);
+            form2.Show();
+        }
     }
 }

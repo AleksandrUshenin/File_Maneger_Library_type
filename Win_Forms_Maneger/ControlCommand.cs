@@ -10,7 +10,7 @@ using Library_File_Maneger.User_Command;
 
 namespace Win_Forms_Maneger
 {
-    internal class ControlCommand
+    public class ControlCommand
     {
         private DataDirectores[] data_dirs;
         private FileManagerLogic file_maneger;
@@ -87,12 +87,12 @@ namespace Win_Forms_Maneger
         }
         internal void button_Click_File(string name)
         {
-            FManeger.SetUserCommandInfo(new UserCommandInfo(DisplayKey.LineCommand, "touch " + name));
+            FManeger.SetUserCommandInfo(new UserCommandInfo(Command_List.LineCommand, "touch " + name));
             file_maneger.Start();
         }
         internal void button_Click_Directory(string name)
         {
-            FManeger.SetUserCommandInfo(new UserCommandInfo(DisplayKey.LineCommand, "mkdir " + name));
+            FManeger.SetUserCommandInfo(new UserCommandInfo(Command_List.LineCommand, "mkdir " + name));
             file_maneger.Start();
         }
     }
