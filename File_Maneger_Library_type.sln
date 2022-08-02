@@ -9,6 +9,10 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Library_File_Maneger", "Lib
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console_File_Maneger", "Console_File_Maneger\Console_File_Maneger.csproj", "{6DE8D7FA-F9E4-4486-AA68-6D07E1249287}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Win_Forms_Maneger", "Win_Forms_Maneger\Win_Forms_Maneger.csproj", "{A07A27CD-0D1C-4CB8-9CF0-D83F895DF2E7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Library_File_maneger_NetFramework", "Library_File_maneger_NetFramework\Library_File_maneger_NetFramework.csproj", "{23CA9CEF-EA62-405A-9194-AE595346EB20}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +31,14 @@ Global
 		{6DE8D7FA-F9E4-4486-AA68-6D07E1249287}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{6DE8D7FA-F9E4-4486-AA68-6D07E1249287}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{6DE8D7FA-F9E4-4486-AA68-6D07E1249287}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A07A27CD-0D1C-4CB8-9CF0-D83F895DF2E7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A07A27CD-0D1C-4CB8-9CF0-D83F895DF2E7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A07A27CD-0D1C-4CB8-9CF0-D83F895DF2E7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A07A27CD-0D1C-4CB8-9CF0-D83F895DF2E7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{23CA9CEF-EA62-405A-9194-AE595346EB20}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{23CA9CEF-EA62-405A-9194-AE595346EB20}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{23CA9CEF-EA62-405A-9194-AE595346EB20}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{23CA9CEF-EA62-405A-9194-AE595346EB20}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
