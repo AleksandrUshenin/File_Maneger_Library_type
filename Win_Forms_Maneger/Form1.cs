@@ -231,7 +231,7 @@ namespace Win_Forms_Maneger
 
         private void buttonTouchFile_Click(object sender, EventArgs e)
         {
-            Form2 form2 = new Form2(ControlCom, "Создание папки", "Имя папки:", 0);
+            Form2 form2 = new Form2(ControlCom, "Создание папки", "Имя папки:", 1);
             form2.Show();
         }
 
