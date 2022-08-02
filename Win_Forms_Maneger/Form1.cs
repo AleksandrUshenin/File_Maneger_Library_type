@@ -137,7 +137,7 @@ namespace Win_Forms_Maneger
             file_maneger.Start();
         }
 
-        private void LeftListBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBoxLeft_SelectedIndexChanged(object sender, EventArgs e)
         {
             ChangeWind(0);
             Command = new UserCommandInfo(Command_List.ChangeDir, Drive[comboBoxLeft.SelectedIndex]);
@@ -165,8 +165,7 @@ namespace Win_Forms_Maneger
             Command = new UserCommandInfo(Command_List.ChangeDir, ControlCom.GetStringDir(IdRight));
             file_maneger.Start();
         }
-
-        private void RightlistBox_SelectedIndexChanged(object sender, EventArgs e)
+        private void comboBoxRight_SelectedIndexChanged(object sender, EventArgs e)
         {
             ChangeWind(1);
             Command = new UserCommandInfo(Command_List.ChangeDir, Drive[comboBoxRight.SelectedIndex]);

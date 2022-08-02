@@ -47,7 +47,6 @@
             this.LeftListBox.Name = "LeftListBox";
             this.LeftListBox.Size = new System.Drawing.Size(392, 388);
             this.LeftListBox.TabIndex = 0;
-            this.LeftListBox.SelectedIndexChanged += new System.EventHandler(this.LeftListBox_SelectedIndexChanged);
             this.LeftListBox.DoubleClick += new System.EventHandler(this.LeftListBox_DoubleClick);
             this.LeftListBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.LeftListBox_MouseDown);
             // 
@@ -59,7 +58,6 @@
             this.RightlistBox.Name = "RightlistBox";
             this.RightlistBox.Size = new System.Drawing.Size(392, 388);
             this.RightlistBox.TabIndex = 1;
-            this.RightlistBox.SelectedIndexChanged += new System.EventHandler(this.RightlistBox_SelectedIndexChanged);
             this.RightlistBox.DoubleClick += new System.EventHandler(this.RightlistBox_DoubleClick);
             this.RightlistBox.MouseDown += new System.Windows.Forms.MouseEventHandler(this.RightlistBox_MouseDown);
             // 
@@ -110,6 +108,7 @@
             this.comboBoxLeft.Name = "comboBoxLeft";
             this.comboBoxLeft.Size = new System.Drawing.Size(392, 24);
             this.comboBoxLeft.TabIndex = 6;
+            this.comboBoxLeft.SelectedIndexChanged += new System.EventHandler(this.comboBoxLeft_SelectedIndexChanged);
             // 
             // comboBoxRight
             // 
@@ -118,6 +117,7 @@
             this.comboBoxRight.Name = "comboBoxRight";
             this.comboBoxRight.Size = new System.Drawing.Size(392, 24);
             this.comboBoxRight.TabIndex = 7;
+            this.comboBoxRight.SelectedIndexChanged += new System.EventHandler(this.comboBoxRight_SelectedIndexChanged);
             // 
             // InfolistBox
             // 
